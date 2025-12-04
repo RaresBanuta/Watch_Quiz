@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#background-video {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    background-color: beige;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 2rem;
+    border-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+
+#start-screen h1 {
+    color: #006039;
+    font-size: 2.5rem;
+}
+
+#start-screen p {
+    color: #e86a33;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#start-screen .start-button {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    justify-content: center;
+    border: 2px solid green;
+    color: #006039;
+    background-color: rgb(234, 233, 233);
+    border-radius: 10px;
+    padding: 5px 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#start-screen .start-button:hover {
+    background-color: rgb(215, 215, 192);
+    transition: background-color 0.3s ease;
+}
+
+.answer-btn {
+    background-color: beige;
+    border: 2px solid #006039;
+    border-radius: 10px;
+    padding: 5px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.answer-btn:hover {
+    background-color: rgb(243, 243, 232);
+    border-color: black;
+    font-size: 1.1rem;
+    margin: 6px 5px;
+    transition: all 0.4s ease;
+}
+
+.answer-btn:not(:hover) {
+    transition: all 0.6s ease;
+}
+
+.answer-btn.correct {
+    background-color: beige;
+    border-color: rgb(0, 75, 0);
+    color: green;
+}
+
+.answer-btn.incorrect {
+    background-color: beige;
+    border-color: rgb(122, 11, 33);
+    color: crimson;
+}
+
+/* SCREENS */
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.display {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#quiz-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+#quiz-text {
+    margin-top: 8px;
+}
+
+
+
+#quiz-screen #quiz-description {
+    color: #006039;
+    font-size: 2.6rem;
+}
+
+.progress-bar {
+    height: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 2px solid #006039;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+#progress {
+    height: 100%;
+    background-color: #e86a33;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+
+
+#result-screen p {
+    font-weight: bold;
+    font-size: 1.9rem;
+    color: #006039;
+}
+
+.result-message {
+    margin: 10px;
+    font-weight: bold;
+    color: #e86a33;
+    font-size: 1.4rem;
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-screen #restart-btn {
+    margin-top: 4px;
+    margin-bottom: 2px;
+    justify-content: center;
+    border: 2px solid green;
+    color: #006039;
+    background-color: rgb(210, 210, 210);
+    border-radius: 12px;
+    padding: 0px 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    /*
+    modifica culoarea butonului la hover
+    */
+    transition: background-color 0.3s ease;
+}
